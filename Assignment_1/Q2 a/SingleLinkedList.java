@@ -3,11 +3,19 @@ public class SingleLinkedList{
 
     private Node head;
 
-    public void addToFront(int value){
+    public void swapNodes(){
 
-        Node newNode = new Node(value);
+    }
+
+    public void addToFront(Node newNode){
+
+        //Node newNode = new Node(value);
         newNode.setNext(head);
         head = newNode;
+    }
+
+    public boolean checkHead(Node n){
+        return n == head;
     }
 
     public void printNodes(){
