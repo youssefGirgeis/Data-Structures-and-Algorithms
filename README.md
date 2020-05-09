@@ -1,0 +1,2 @@
+Computer Science 272: Data Structures and Algorithms builds on the concepts introduced in
+COMP 268 (Introduction to Java Programming) and shows how to use data structures as tools to design computer programs that will cope with the complexity of actual applications.
