@@ -1,4 +1,3 @@
-import org.graalvm.compiler.graph.Node;
 
 public class SingleLinkedList{
 
