@@ -1,0 +1,30 @@
+public class DoublyReversedList{
+
+    private Node head;
+    private Node tail;
+
+    public void addToFront(Node newNode){
+        
+        newNode.setNext(head);
+        if (head == null){
+            tail = newNode;
+        }
+        else{
+            head.setPrevious(newNode);
+            newNode.setNext(head);
+        }
+        head = newNode;
+    }
+
+    public void printNodes(){
+        Node current = head;
+        System.out.print("HEAD -> ");
+
+        while(current != null){
+            System.out.print(current.getValue());
+            current = current.getNext();
+            System.out.print(" <=> ");
+        }
+        System.out.println("null \n");
+    }
+}
