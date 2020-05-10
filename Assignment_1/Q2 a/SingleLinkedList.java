@@ -3,8 +3,21 @@ public class SingleLinkedList{
 
     private Node head;
 
-    public void swapNodes(){
+    public void swapNodes(Node beforeTarget){
+        
+        // if (isHead(beforeTarget)){
+        //     Node afterTarget = beforeTarget.getNext();
+        //     beforeTarget.setNext(afterTarget.getNext());
+        //     afterTarget.setNext(beforeTarget);
+        //     head = afterTarget;
+        // }
 
+        Node target = beforeTarget.getNext();
+        Node afterTarget = target.getNext();
+
+        beforeTarget.setNext(afterTarget);
+        target.setNext(afterTarget.getNext());
+        afterTarget.setNext(target);
     }
 
     public void addToFront(Node newNode){
@@ -14,7 +27,7 @@ public class SingleLinkedList{
         head = newNode;
     }
 
-    public boolean checkHead(Node n){
+    public boolean isHead(Node n){
         return n == head;
     }
 
@@ -27,6 +40,6 @@ public class SingleLinkedList{
             current = current.getNext();
             System.out.print(" -> ");
         }
-        System.out.println("null");
+        System.out.println("null\n");
     }
 }

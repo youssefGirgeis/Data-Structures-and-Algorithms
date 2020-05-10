@@ -18,5 +18,9 @@ public class Main{
         sll.addToFront(node5);
 
         sll.printNodes();
+        System.out.println("After Swapping\n");
+        sll.swapNodes(node4);
+        sll.printNodes();
+
     }
 }
