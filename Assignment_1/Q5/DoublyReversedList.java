@@ -11,6 +11,9 @@ public class DoublyReversedList{
 
         while(current != null){
             beforeCurrent = current.getPrevious();
+            if(beforeCurrent == null){
+                tail = current;
+            }
             current.setPrevious(current.getNext());
             current.setNext(beforeCurrent);
             current = current.getPrevious();

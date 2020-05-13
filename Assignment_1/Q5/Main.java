@@ -16,7 +16,7 @@ public class Main{
 
         drl.printNodes();
         drl.reverseNodes();
-
+        System.out.println("Reverse the list");
         drl.printNodes();
 
 
