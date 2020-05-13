@@ -2,6 +2,23 @@ public class DoublyReversedList{
 
     private Node head;
     private Node tail;
+    private int size; 
+
+    public void reverseNodes(){
+        
+        Node current = head;
+        Node beforeCurrent = null;
+
+        while(current != null){
+            beforeCurrent = current.getPrevious();
+            current.setPrevious(current.getNext());
+            current.setNext(beforeCurrent);
+            current = current.getPrevious();
+        }
+        if (beforeCurrent != null){
+            head = beforeCurrent.getPrevious();
+        }
+    }
 
     public void addToFront(Node newNode){
         
@@ -14,7 +31,13 @@ public class DoublyReversedList{
             newNode.setNext(head);
         }
         head = newNode;
+        size++;
     }
+
+    public boolean isEmpty(){
+        return (size == 0);
+    }
+
 
     public void printNodes(){
         Node current = head;

@@ -15,5 +15,10 @@ public class Main{
         drl.addToFront(node5);
 
         drl.printNodes();
+        drl.reverseNodes();
+
+        drl.printNodes();
+
+
     }
 }
