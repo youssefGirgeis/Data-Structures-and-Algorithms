@@ -19,7 +19,7 @@ public class Main{
 
         sll.printNodes();
         System.out.println("After Swapping\n");
-        sll.swapNodes(node4);
+        sll.swapNodes(node1, node2);
         sll.printNodes();
 
     }
