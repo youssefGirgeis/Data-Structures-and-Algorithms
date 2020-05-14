@@ -1,38 +1,62 @@
+
 public class RandomQueue{
 
-    private Node head;
-    private Node tail;
-    private int size;
+    private int maxSize; // the max number items in the queue 
+    private int[] queue; // this is our queue 
+    private int front; // index of the element at the front
+    private int end; // index of the element at the back of the queue 
+    private int counter; // number of items in the queue
 
-    public void addToEnd(Node newNode){
-
-        if (head == null){
-            head = newNode;
-            tail = newNode;
-        }
-        else{
-            tail.setNext(newNode);
-            newNode.setPrevious(tail);
-            tail = newNode;
-        }
-        size++;
-        newNode.setIndex(size-1);
+    public RandomQueue(int maxSize){
+        this.maxSize = maxSize;
+        queue = new int[maxSize];
+        front = 0;
+        end = -1;
+        counter = 0;
     }
 
-    public void remove(){
+    public void add (int item){
 
+        if (isFull()){
+            int[] newArray = new int[maxSize *2];
+            System.arraycopy(queue, 0, newArray, 0, counter);
+            queue = newArray;
+        }
+
+        end += 1;
+        queue[end] = item;
+        counter++;
     }
 
-    public void printNodes(){
-        Node current = head;
-        System.out.print("HEAD -> ");
+    public int remove(){
 
-        while(current != null){
-            System.out.print(current.getValue());
-            current = current.getNext();
-            System.out.print(" <=> ");
+        if(!isEmpty()){
+            int randomIndex = (int)(Math.random() * counter);
+            int removedItem = queue[randomIndex];
+            queue[randomIndex] = queue[end];
+            counter--;
+
+            return removedItem;
         }
-        System.out.println("null\n");
+
+        return -1;
+    }
+
+
+    public boolean isEmpty(){
+        return (counter == 0);
+    }
+
+    public boolean isFull(){
+        return (counter == maxSize);
+    }
+
+    public void printItems(){
+
+        for (int i=0; i<counter; i++){
+            System.out.print(queue[i] + " ");
+        }
+        System.out.println();
     }
 
 }

@@ -1,22 +1,19 @@
 public class Main{
     public static void main(String[] args) {
 
-        RandomQueue rq = new RandomQueue();
+        RandomQueue rq = new RandomQueue(5);
         
-        Node node1 = new Node(1);
-        Node node2 = new Node(2);
-        Node node3 = new Node(3);
-        Node node4 = new Node(4);
-        Node node5 = new Node(5);
+        rq.add(1);
+        rq.add(2);
+        rq.add(3);
+        rq.add(4);
+        rq.add(5);
 
-        rq.addToEnd(node1);
-        rq.addToEnd(node2);
-        rq.addToEnd(node3);
-        rq.addToEnd(node4);
-        rq.addToEnd(node5);
+        rq.printItems();
 
-        rq.printNodes();
-
-
+        while(! rq.isEmpty()){
+            System.out.println(rq.remove() + " is removed");
+            rq.printItems();
+        }
     }
 }
