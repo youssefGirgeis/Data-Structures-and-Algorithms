@@ -11,7 +11,6 @@ public class RandomQueue{
 
     private int maxSize; // the max number items in the queue 
     private int[] queue; // this is our queue 
-    private int front; // index of the element at the front
     private int end; // index of the element at the back of the queue 
     private int counter; // number of items in the queue
 
@@ -23,7 +22,6 @@ public class RandomQueue{
     public RandomQueue(int maxSize){
         this.maxSize = maxSize;
         queue = new int[maxSize];
-        front = 0;
         end = -1;
         counter = 0;
     }
@@ -69,6 +67,7 @@ public class RandomQueue{
 
             // decrease the number of items in the queue by 1
             counter--;
+            end--;
 
             return removedItem;
         }
@@ -96,10 +95,11 @@ public class RandomQueue{
      * print all items in the queue.
      */
     public void printItems(){
-
+        System.out.print("[ ");
         for (int i=0; i<counter; i++){
             System.out.print(queue[i] + " ");
         }
+        System.out.print("]");
         System.out.println();
     }
 

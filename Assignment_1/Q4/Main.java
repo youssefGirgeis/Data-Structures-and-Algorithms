@@ -13,11 +13,11 @@ public class Main{
         RandomQueue rq = new RandomQueue(5);
         
         // Add 5 items to the queue.
-        rq.add(1);
+        rq.add(10);
         rq.add(2);
-        rq.add(3);
+        rq.add(36);
         rq.add(4);
-        rq.add(5);
+        rq.add(59);
 
         //print all items in the queue
         rq.printItems();
