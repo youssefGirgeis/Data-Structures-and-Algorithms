@@ -1,3 +1,11 @@
+/*
+Course: COMP 272
+Assignment: 1 - Q1 b
+Name: Youssef Girgeis
+Student ID : 3396678
+Date: May 17, 2020
+*/
+
 public class Queue{
 
     private Node head; // first element in the queue.
