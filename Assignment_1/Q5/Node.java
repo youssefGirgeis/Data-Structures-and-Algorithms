@@ -1,3 +1,10 @@
+/*
+Course: COMP 272
+Assignment: 1 - Q5
+Name: Youssef Girgeis
+Student ID : 3396678
+Date: May 17, 2020
+*/
 
 public class Node{
 
