@@ -1,3 +1,5 @@
+
+
 public class TreeNode {
     
     private int data;
@@ -60,6 +62,24 @@ public class TreeNode {
             curr = curr.leftChild;  
 
         return curr; 
+    }
+
+    public TreeNode inOrderNext(TreeNode node){
+
+        if (node.rightChild != null){
+            TreeNode current = node;
+            while(current.leftChild != null){
+                current = current.leftChild;
+            }
+            return current;
+        }
+
+        TreeNode p = node.parent;
+        while(p != null && node == p.rightChild){
+            node = p;
+            p = p.parent;
+        }
+        return p;
     }
 
     public void setParent(TreeNode parent){

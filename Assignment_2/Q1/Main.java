@@ -34,6 +34,7 @@ public class Main {
 
         TreeNode result = root.preOrderNext(root.getRight().getRight().getLeft());
         TreeNode result2 = root.postOrderNext(root.getLeft());
+        TreeNode result3 = root.inOrderNext(root.getLeft().getRight());
   
         if (result != null)  
         { 
@@ -51,6 +52,15 @@ public class Main {
         else
         { 
             System.out.printf("Next of %d is null\n", root.getLeft().getData()); 
+        }
+
+        if (result3 != null)  
+        { 
+            System.out.printf("In Order Next of %d is %d\n", root.getLeft().getRight().getData(), result3.getData()); 
+        } 
+        else
+        { 
+            System.out.printf("Next of %d is null\n", root.getLeft().getRight().getData()); 
         }
 
     }
