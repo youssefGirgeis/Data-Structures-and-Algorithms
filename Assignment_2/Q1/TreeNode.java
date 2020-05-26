@@ -40,6 +40,28 @@ public class TreeNode {
         return parent.rightChild; 
     }
 
+    public TreeNode postOrderNext(TreeNode node){
+        // Root has no successor in postorder  
+        // traversal  
+        if (node.parent == null)  
+            return null;  
+
+        // If given node is right child of its  
+        // parent or parent's right is empty, then  
+        // parent is postorder successor.  
+        TreeNode parent = node.parent;  
+        if (parent.rightChild == null || parent.rightChild == node)  
+            return parent;  
+
+        // In all other cases, find the leftmost  
+        // child in right substree of parent.  
+        TreeNode curr = parent.rightChild;  
+        while (curr.leftChild != null)  
+            curr = curr.leftChild;  
+
+        return curr; 
+    }
+
     public void setParent(TreeNode parent){
         this.parent = parent;
     }

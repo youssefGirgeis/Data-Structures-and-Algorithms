@@ -32,11 +32,21 @@ public class Main {
         root.getRight().getRight().getRight().setParent(root.getRight().getRight());
 
 
-        TreeNode result = root.preOrderNext(root.getRight().getRight().getLeft()); 
+        TreeNode result = root.preOrderNext(root.getRight().getRight().getLeft());
+        TreeNode result2 = root.postOrderNext(root.getLeft());
   
         if (result != null)  
         { 
-            System.out.printf("Next of %d is %d\n", root.getRight().getRight().getLeft().getData(), result.getData()); 
+            System.out.printf("Pre Order Next of %d is %d\n", root.getRight().getRight().getLeft().getData(), result.getData()); 
+        } 
+        else
+        { 
+            System.out.printf("Next of %d is null\n", root.getRight().getRight().getLeft().getData()); 
+        }
+
+        if (result2 != null)  
+        { 
+            System.out.printf("Post Order Next of %d is %d\n", root.getLeft().getData(), result2.getData()); 
         } 
         else
         { 
