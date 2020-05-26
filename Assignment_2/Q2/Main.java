@@ -10,7 +10,11 @@ public class Main {
         bt.getRoot().getRight().setLeft(new TreeNode(26));
         bt.getRoot().getRight().setRight(new TreeNode(30));
 
-        
+        if(bt.isBinarySearchTree()){
+            System.out.println("This tree is a binary search tree");
+        } else{
+            System.out.println("This tree is not a binary search tree");
+        }
         
     }
 }
