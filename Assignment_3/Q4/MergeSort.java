@@ -1,10 +1,10 @@
 public class MergeSort {
 
-    public void sort(int unorderedArray[]){
-        sort(unorderedArray, 0, unorderedArray.length-1);
-    }
+    // public void sort(int unorderedArray[]){
+    //     sort(unorderedArray, 0, unorderedArray.length-1);
+    // }
 
-    private void sort(int unorderedArray[], int start, int end){
+    public void sort(int unorderedArray[], int start, int end){
         if(end <= start){return; }
 
         int middle = (start+end)/2;
