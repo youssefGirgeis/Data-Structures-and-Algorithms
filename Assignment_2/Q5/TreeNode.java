@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class TreeNode {
 
     private int data;
@@ -31,6 +33,7 @@ public class TreeNode {
             }
             else {
                 rightChild.insert(value);
+                inOrderList.add(value);
             }
         }
     }
@@ -41,12 +44,12 @@ public class TreeNode {
             leftChild.traverseInOrder();
         }
         System.out.print(data + " ");
-        //this.inOrder = data;
 
         if (rightChild != null){
             rightChild.traverseInOrder();
         }
     }
+
 
     public void traversePreOrder() {
         if(leftChild != null){
@@ -74,6 +77,12 @@ public class TreeNode {
         System.out.print(data + " ");
 
     }
+
+    public void inOrderNumber(){
+        //System.out.println(inOrderList.get(1));
+    }
+
+
 
     public int getData() {
         return data;

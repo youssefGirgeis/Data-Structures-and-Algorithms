@@ -11,7 +11,7 @@ public class Main {
         sbt.insert(29);
         sbt.insert(26);
         sbt.insert(22);
-        sbt.insert(32);
+        sbt.insert(32); 
 
         System.out.print("Inorder Traversal: ");
         sbt.traverseInOrder();
@@ -21,7 +21,7 @@ public class Main {
         sbt.traversePostOrder();
         System.out.println();
         
-       
+        //System.out.println(sbt.getRoot().getInOrder());
 
     }
 }
