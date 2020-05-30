@@ -13,14 +13,15 @@ public class Main {
         sbt.insert(22);
         sbt.insert(32);
 
-        sbt.inOrderNumber();
-        System.out.println();
-        sbt.preOrderNumber();
-        System.out.println();
-        sbt.postOrderNumber();
+        System.out.print("Inorder Traversal: ");
+        sbt.traverseInOrder();
+        System.out.print("\nPreorder Traversal: ");
+        sbt.traversePreOrder();
+        System.out.print("\nPostorder Traversal: ");
+        sbt.traversePostOrder();
         System.out.println();
         
-        System.out.println(sbt.getRoot().getInOrder());
+       
 
     }
 }

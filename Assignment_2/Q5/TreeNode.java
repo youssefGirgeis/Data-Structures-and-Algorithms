@@ -35,42 +35,42 @@ public class TreeNode {
         }
     }
 
-    public void inOrderNumber(){
+    public void traverseInOrder(){
 
         if(leftChild != null){
-            leftChild.inOrderNumber();
+            leftChild.traverseInOrder();
         }
         System.out.print(data + " ");
-        this.inOrder = data;
+        //this.inOrder = data;
 
         if (rightChild != null){
-            rightChild.inOrderNumber();
+            rightChild.traverseInOrder();
         }
     }
 
-    public void preOrderNumber() {
+    public void traversePreOrder() {
         if(leftChild != null){
             System.out.print(leftChild.data + " ");
-            this.preOrder = data;
-            leftChild.preOrderNumber();
+            //this.preOrder = data;
+            leftChild.traversePreOrder();
         }
         if (rightChild != null){
             System.out.print(rightChild.data + " ");
-            this.preOrder = data;
-            rightChild.preOrderNumber();
+            //this.preOrder = data;
+            rightChild.traversePreOrder();
         }
     }
 
-    public void postOrderNumber(){
+    public void traversePostOrder(){
 
         if (leftChild != null){
-            leftChild.postOrderNumber();
+            leftChild.traversePostOrder();
         }
 
         if(rightChild != null){
-            rightChild.postOrderNumber();
+            rightChild.traversePostOrder();
         }
-        this.postOrder = data;
+        //this.postOrder = data;
         System.out.print(data + " ");
 
     }

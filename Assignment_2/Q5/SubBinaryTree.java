@@ -5,22 +5,22 @@ public class SubBinaryTree extends BinaryTree {
     private int inOrder;
 
 
-    public void inOrderNumber(){
+    public void traverseInOrder(){
         if (root != null){
-            root.inOrderNumber();
+            root.traverseInOrder();
         }
     }
 
-    public void preOrderNumber(){
+    public void traversePreOrder(){
         if (root != null){
             System.out.print(root.getData() + " ");
-            root.preOrderNumber();
+            root.traversePreOrder();
         }
     }
 
-    public void postOrderNumber(){
+    public void traversePostOrder(){
         if (root != null){
-            root.postOrderNumber();
+            root.traversePostOrder();
         }
     }
 
