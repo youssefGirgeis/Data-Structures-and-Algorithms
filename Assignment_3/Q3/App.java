@@ -13,6 +13,20 @@ public class App {
         int[] s1 = {3,3,3,3,0,1,1,1,2,2,2,2}; // first set
         int[] s2 = {2,2,2,1,0,0,0,0,3}; // second set
 
+        // print s1
+        System.out.print("First Set: ");
+        for (int i = 0; i < s1.length; i++) {
+            System.out.print(s1[i] + " ");
+        }
+        System.out.println();
+
+        // print s2
+        System.out.print("Second set: ");
+        for (int i = 0; i < s2.length; i++) {
+            System.out.print(s2[i] + " ");
+        }
+        System.out.println();
+
         MergeSort.sort(s1); // sorting s1 using merge sort
         MergeSort.sort(s2); // sorting s2 using merge sort
 
