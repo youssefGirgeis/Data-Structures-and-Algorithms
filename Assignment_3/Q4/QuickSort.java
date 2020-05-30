@@ -1,8 +1,17 @@
+/*
+Course: COMP 272
+Assignment: 3 - Q4
+Name: Youssef Girgeis
+Student ID : 3396678
+Date: May 30, 2020
+*/
+
 public class QuickSort {
 
     public void quickSort(int[] unsortedArray, int start, int end){
         if (start < end){
-            int partitionIndex = partition(unsortedArray, start, end); // index position of the correctly placed pivot in the array
+            // index position of the correctly placed pivot in the array
+            int partitionIndex = partition(unsortedArray, start, end); 
             quickSort(unsortedArray, start, partitionIndex-1); // to sort the left partition
             quickSort(unsortedArray, partitionIndex+1, end); // sort the right partition
         }
