@@ -1,4 +1,16 @@
-import java.util.ArrayList;
+/*
+Course: COMP 272
+Assignment: 2 - Q5
+Name: Youssef Girgeis
+Student ID : 3396678
+Date: May 31, 2020
+
+Problem:
+Create a subclass of BinaryTree whose nodes have fields for storing
+preorder, post-order, and in-order numbers. Write methods preOrderNumber(),
+inOrderNumber(), and postOrderNumbers() that assign these numbers correctly. These
+methods should each run in O(n) time.
+*/
 
 public class TreeNode {
 
@@ -33,7 +45,6 @@ public class TreeNode {
             }
             else {
                 rightChild.insert(value);
-                inOrderList.add(value);
             }
         }
     }
@@ -44,6 +55,7 @@ public class TreeNode {
             leftChild.traverseInOrder();
         }
         System.out.print(data + " ");
+        this.inOrder = data;
 
         if (rightChild != null){
             rightChild.traverseInOrder();
@@ -51,35 +63,31 @@ public class TreeNode {
     }
 
 
-    public void traversePreOrder() {
+    public void preOrderNumber() {
         if(leftChild != null){
             System.out.print(leftChild.data + " ");
-            //this.preOrder = data;
-            leftChild.traversePreOrder();
+            this.preOrder = data;
+            leftChild.preOrderNumber();
         }
         if (rightChild != null){
             System.out.print(rightChild.data + " ");
-            //this.preOrder = data;
-            rightChild.traversePreOrder();
+            this.preOrder = data;
+            rightChild.preOrderNumber();
         }
     }
 
-    public void traversePostOrder(){
+    public void postOrderNumber(){
 
         if (leftChild != null){
-            leftChild.traversePostOrder();
+            leftChild.postOrderNumber();
         }
 
         if(rightChild != null){
-            rightChild.traversePostOrder();
+            rightChild.postOrderNumber();
         }
-        //this.postOrder = data;
+        this.postOrder = data;
         System.out.print(data + " ");
 
-    }
-
-    public void inOrderNumber(){
-        //System.out.println(inOrderList.get(1));
     }
 
 
